@@ -1,0 +1,31 @@
+<html5>
+    <head>
+        <title>MacBest</title>
+    </head>
+    
+    <body>
+        BestBody
+        <div id="parent">Stuff </div>
+        <div>Other Stuff</div>
+        <p>
+        </p>
+    </body>
+    <script>
+        var parent = document.getElementById("parent");
+        console.log(parent);
+
+        var str =
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sapiente quas doloremque similique mollitia iusto, nulla? Necessitatibus nam, expedita cum alias. Facere asperiores velit nostrum repellat, maxime totam dicta cumque aliquid, incidunt excepturi, dolorem sed corrupti molestias consequuntur explicabo rerum et alias temporibus numquam obcaecati optio nemo ipsa magni. Est! "
+
+
+        var i = 0;
+        while (i < 3) {
+            var html = "<p> Work Please </p>";
+            var template = document.createElement('p'); // Create Node
+            template.innerHTML = html;
+            parent.appendChild(template);
+            i++;
+        }
+        // Loops allow you to not duplicate code ---> literally in all prog
+    </script>
+</html5>
