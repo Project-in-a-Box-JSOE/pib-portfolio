@@ -31,38 +31,83 @@
 
   ####Single Use Tags
 
-  `<!DOCTYPE html>` **tells the web broswer that the document will be in HTML. This line of code MUST be in the first line of code in all of your HTML documents.** 
+  * `<!DOCTYPE html>` **tells the web broswer that the document will be in HTML. This line of code MUST be in the first line of code in all of your HTML documents.** 
 
-  `<html>` **and its closing tag at the end of the file, `</html>` are used to inform the browser that the lines in between those two lines are HTML code.** You can view this tag as a *vertebrate* of sorts, connecting and unifying all the smaller components of the file. 
+  * `<html>` **and its closing tag at the end of the file, `</html>` are used to inform the browser that the lines in between those two lines are HTML code.** You can view this tag as a *vertebrate* of sorts, connecting and unifying all the smaller components of the file. 
 
-  `<head>` **Content between head tags doesn’t show up as information that is shown on the web page. It is used in order to tell the web browser information about the page, such as the title and other files like stylesheets (CSS) and scripts (JavaScript) that are linked to the page.** Think about how your actual head encompasses your brain, a deep and rich well of knowledge that isn't externally apparent.
+  * `<head>` **Content between head tags doesn’t show up as information that is shown on the web page. It is used in order to tell the web browser information about the page, such as the title and other files like stylesheets (CSS) and scripts (JavaScript) that are linked to the page.** Think about how your actual head encompasses your brain, a deep and rich well of knowledge that isn't externally apparent.
   
-  `<title>` **Content between this and it’s ending tag are not displayed on the website itself, but are shown on the title bar.** Consider this your web page's nice (optional) head of hair.
+  * `<title>` **Content between this and it’s ending tag are not displayed on the website itself, but are shown on the title bar.** Consider this your web page's nice (optional) head of hair.
 
-  `<body>` **Visible content is displayed between this tag and it’s ending tag. Content that you want to appear on your website goes in the body section.** All your bones go in here!
+  * `<body>` **Visible content is displayed between this tag and it’s ending tag. Content that you want to appear on your website goes in the body section.** All your bones go in here!
 
   ####Multi-Use Tags
 
-  `<h1>` In this tag, the text “My First Heading” is shown. Browsers view the &lt;h1&gt; tag as a heading tag to display large text over a section. &lt;h2&gt; through &lt;h6&ht; tags likewise exist, getting smaller in default size as they increase numerically.
+  * `<h1>` In this tag, the text “My First Heading” is shown. Browsers view the &lt;h1&gt; tag as a heading tag to display large text over a section. &lt;h2&gt; through &lt;h6&ht; tags likewise exist, getting smaller in default size as they increase numerically.
 
-  `<p>` Within this tag, the text “My first paragraph” is shown. Browsers view the &lt;p&gt; tag as a paragraph tag to display paragraph text within a section.
+  * `<p>` Within this tag, the text “My first paragraph” is shown. Browsers view the &lt;p&gt; tag as a paragraph tag to display paragraph text within a section.
 
   Pretty simple stuff, right? HTML elements consist of tags surrounded by angle brackets <> that denote what is going to be used between the opening tag <> and the closing tag </>. See the webpage for this HTML [here](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro).
 
+  <span style="color:red">Challenge #1: Introduce Yourself</span> <br>
+  Take the first step towards creating your own personal portfolio - content! Add headers and subheaders, a descriptive paragraph, a picture of yourself, and lists of your skills, work experience, and projects. Add all of this inside the appropriate tags. 
 
 
-  "Show Example Here"
+  ####Other Tags
 
-  `console.log("I'm Alive!  Hello World")`
+  * `<a>` HTML links are defined using the &lt;a&gt; tag with the link in between quotes in the href attribute and the name of the link in between the tags.
 
+  *Example:* `<a href="https://www.w3schools.com">This is a link</a>`
 
+  * `<img>` HTML images are defined with the &lt;img&gt; tag with the image link in the src attribute, alt containing text to display when the image doesn’t load, and width/height defining an object’s size.
 
+  *Example:* `<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">`
 
+  * `<ul>`/`<li>` Unordered/Bulleted lists are displayed with the &lt;ul&gt; tag. List elements are displayed with the &lt;li&gt; tag.
 
+  *Unordered:*
+  ```
+  <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+  </ul>```
 
+  *Ordered:*
+  ```
+  <ol>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+  </ol>```
 
+  * `<table>` HTML tables are defined with the &lt;table&gt; tag. Each table row is defined with the &lt;tr&gt; tag. A table header is defined with the &lt;th&gt; tag. By default, table headings are bold and centered. A table data/cell is defined with the &lt;td&gt; tag.
 
+  *Example:*
 
+  ```
+  <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th> 
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+</table>```
 
 </xmp>
 
