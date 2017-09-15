@@ -22,6 +22,37 @@
   ___
   ####Lesson 2: Creating your Style
 
+  First and foremost, CSS cannot exist without pre-existing HTML. All styling can only be applied to content that has already been surrounded with tags.
+
+  There are three *selectors* CSS styling can be applied to:
+
+  1. **element**: This is inclusive of all HTML tags such as &lt;h1&gt; and &lt;p&gt;. An example of this is as follows:
+
+  ```
+  p {
+    color: red;
+    text-align: center;
+  } ```
+
+  2. **id**: This selector uses the id attribute of an HTML element to select a specific element. The id of an element should be the only one of its kind on a page, so any styling applied to this selector can only be applied to one element. To select an element with a specific id, preface the id name with a hash (#) character.
+
+  ```
+  #para1 {
+    text-align: center;
+    color: red;
+  }```
+
+  3. **class**: This selector selects elements with a specific class attribute. The class of an element can be applied to any number of elements. To select elements with a specified class, preface the id name with a period (.) character.
+
+  ```
+  .center {
+    text-align: center;
+    color: red;
+  }```
+
+  Recalling *block* and *inline* elements from the previous HTML lesson, 
+
+
 
 
   It's nearly impossible to know every feasible CSS attribute and attribute value out there, but here's [a good reference that encompasses everything you need](https://www.onblastblog.com/css3-cheat-sheet/).
