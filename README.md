@@ -19,9 +19,7 @@ With javascript, you are able to *do*.
 
 
 <a name="jumpstart"></a>
-___
-___
-####Lesson 1: Moving Those Muscles.  Let's Hack
+#### Lesson 1: Moving Those Muscles.  Let's Hack
 Its an unspoken rule for programmers learning programming
 to print out a line symbolizing a machine's break into the real world. <br/>
 So let's go to the Chrome Developer's Tool > Console
@@ -46,8 +44,9 @@ Imagine if you needed to print "I'm Alive!" 1000 times.
 Without Loops, that would be 1000 lines of code.  With a loop, it would look
 like this:
 ___
-`for (var i = 0; i < 1000; i++){
-  console.log("I'm Alive! Its the" + i + "nth print");
+`for (var i = 0; i < 1000; i++){  
+  console.log("I'm Alive! Its the" + i + "nth  
+  print");
 }`
 
 
@@ -55,12 +54,13 @@ Now to Dive into code.  Remember how HTML are just nodes of data?
 When you have classes of similar elements, you can use javascript to grab
 the data and print it out.
 
-`
+```
 var nodes = document.getElementsbyClassName("box");
 var arrayLength = array.length() // .length() is a function call as a property of arrays
 for (int i = 0; i < arrayLength; i++ ){
   console.log(nodes[i]);
-}`
+}
+```
 
 
 
