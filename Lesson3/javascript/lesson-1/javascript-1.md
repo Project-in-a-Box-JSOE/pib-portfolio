@@ -55,9 +55,7 @@ for (var i = 0; i < 1000; i++){
 }
 ```
 
-Lets break this down, in javascript, this  
-for loop will take in 3 parameters that control  
-how long to run the loop.  
+Lets break this down. In javascript, this "for loop" statement will take in 3 parameters that control how long to run the loop.  
 First, we create a counter and set it to 0.  
 Second, we state the *Condition* that the counter   must be less than 1000.
 Third, we have the increment, where you set how you control the function.  By putting i++, we are telling the program to increment i by 1 for each
