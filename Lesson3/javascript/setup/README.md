@@ -8,7 +8,7 @@ NodeJS, and general web knowledge in a project-based approach.
 
 
 __Your ToolKit:__
-1. [Atom](https://atom.io/) - Text Editor
+1. [Atom](https://atom.io/) &nbsp; - Text Editor
 2. Git &nbsp; &nbsp; &nbsp; - Version Control, how we'll distribute files and projects.  Invaluable skill for a developer.
 3. Chrome                   -
 
