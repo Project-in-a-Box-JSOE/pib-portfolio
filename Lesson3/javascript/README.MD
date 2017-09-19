@@ -8,6 +8,6 @@ and methods will allow you to flex your Javascript muscles and do cool things.
 [Insert Example here]
 
 
-* [Part 1]("https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-1")
-* [Part 2]("https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-2")
-* [Part 3]("https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-3")
+* [Part 1](https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-1)
+* [Part 2](https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-2)
+* [Part 3](https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-3)
