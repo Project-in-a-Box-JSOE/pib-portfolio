@@ -10,17 +10,20 @@ not only web development with ease, but also take
 a bite of the knowledge of the internet along with the experience.
 
 ___
-#### World-Wide Web Works
+#### HTML Exercises
+* [Intro]("")
 * [Part 1]("https://google.com")
 * [Part 2]("https://google.com")
 * [Part 3]("https://google.com")
 ___
-#### HTML Exercises
+#### CSS Exercises
+* [Intro]("")
 * [Part 1]("https://google.com")
 * [Part 2]("https://google.com")
 * [Part 3]("https://google.com")
 ___
 #### Juggling Javascript
+* [Intro]("")
 * [Part 1](lesson-js-1.html)
 * [Part 2]("https://google.com")
 * [Part 3]("https://google.com")
