@@ -7,20 +7,19 @@ web development, and learn HTML, CSS, Javascript,
 NodeJS, and general web knowledge in a project-based approach.
 
 First, the tools you'll be using:  
-1. *[Atom](https://atom.io/)* - Choice Text Editor (Especially useful for learning javascript) Download Here .
-2. *Git* - Version Control, how we'll distribute files and projects.  Invaluable skill for a developer.
+* 1. *[Atom](https://atom.io/)* - Choice Text Editor (Especially useful for learning javascript) Download Here .
+* 2. *Git* - Version Control, how we'll distribute files and projects.  Invaluable skill for a developer.
 
 Second, the structure of these lessons. Please go through these in the order, we promise there's a method to the madness, we go a little more in depth about topics.  
 They are self-contained and follow the following format:
 
 learning file w/ small exercises
 mini-project
-video-recap & Summary
+video-recap & Summary.  
 
 _____learn.md
 _____exercise.md
 _____mini-project.md
-
 ================================
 
 
