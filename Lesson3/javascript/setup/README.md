@@ -16,19 +16,18 @@ __Your ToolKit:__
 __The Plan:__  
 Structure of these lessons. Please go through these in the order, we promise there's a method to the madness, we go a little more in depth about topics.  
 
-They are self-contained and follow the following format:
-
+Each Topic is a self-contained lesson, with its:  
 learning file w/ small exercises
 mini-project
 video-recap & Summary.  
 
 ```
+__html
 _____learn.md
 _____exercise.md
 _____mini-project.md
 ```
 ================================
-
 
 Topics:
 1. HTML
