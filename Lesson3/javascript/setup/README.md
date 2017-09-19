@@ -1,33 +1,27 @@
 Starting Out
 ================================
 
-#Welcome to Pib's Web Development Project.
-#Here, you'll learn the secret ins and outs of
-#web development, and learn HTML, CSS, Javascript,
-#NodeJS, and general web knowledge in a project-based approach.
+Welcome to Pib's Web Development Project.
+Here, you'll learn the secret ins and outs of
+web development, and learn HTML, CSS, Javascript,
+NodeJS, and general web knowledge in a project-based approach.
 
-Your ToolKit:
-1. *[Atom](https://atom.io/)* - Choice Text Editor (Especially useful for learning javascript) Download Here .
-2. __Git__ - Version Control, how we'll distribute files and projects.  Invaluable skill for a developer.
 
-Second, the structure of these lessons. Please go through these in the order, we promise there's a method to the madness, we go a little more in depth about topics.  
+__Your ToolKit:__
+1. [Atom](https://atom.io/) - Choice Text Editor (Especially useful for learning javascript) Download Here .
+2. Git                      - Version Control, how we'll distribute files and projects.  Invaluable skill for a developer.
+
+
+__The Plan:__
+Structure of these lessons. Please go through these in the order, we promise there's a method to the madness, we go a little more in depth about topics.  
+
 They are self-contained and follow the following format:
 
 learning file w/ small exercises
 mini-project
 video-recap & Summary.  
 
-```html
-  <html>
-  <head></head>
-  <body>
-
-  </body>
-  </html>
-
-
-
-
+```
 _____learn.md
 _____exercise.md
 _____mini-project.md
