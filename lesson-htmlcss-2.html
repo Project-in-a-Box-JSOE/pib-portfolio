@@ -12,23 +12,23 @@
 
   ### CSS: Clearly Stylish? Si.
 
-  > "CSS is not a trivial technology to learn, there are literally 100s of 
-  > properties to master and many of the usage of many of these properties is 
-  > not straight forward. To further complicate matters we find that browser 
-  > support for CSS can be quite erratic and the use of vendor prefixed 
-  > properties (ex. -webkit-) is not uncommon, but generally required. 
-  > Presentation is quite important so given the complexity of implementing 
-  > designs using CSS many aspiring Web developers give up and adopt CSS 
-  > frameworks such as Twitter Bootstrap. This is not a surprising outcome as 
-  > developer productivity can be significantly improved using a CSS framework, 
-  > though this gain often comes at the expense of unique design and reduced 
+  > "CSS is not a trivial technology to learn, there are literally 100s of
+  > properties to master and many of the usage of many of these properties is
+  > not straight forward. To further complicate matters we find that browser
+  > support for CSS can be quite erratic and the use of vendor prefixed
+  > properties (ex. -webkit-) is not uncommon, but generally required.
+  > Presentation is quite important so given the complexity of implementing
+  > designs using CSS many aspiring Web developers give up and adopt CSS
+  > frameworks such as Twitter Bootstrap. This is not a surprising outcome as
+  > developer productivity can be significantly improved using a CSS framework,
+  > though this gain often comes at the expense of unique design and reduced
   > performance."
-  >  
+  >
   > <span style="color:grey">- Professor Thomas Powell, UCSD</span>
 
   Now that we have a white-and-black form standing before us, it'd probably be in our best interest to clothe and align the poor thing. More than that, we want to make it the belle of the ball - would you rather engage the white t-shirt blue jeans flavor of your content or something wrapped in a Versace gown?
 
-  **CSS** or **Cascading Style Sheets** allow you to swathe your humbly structured content in the vestments of your wildest dreams - as long as you know what you're doing. In taking down the analogy a notch, CSS also lets you do all the basic necessities of formatting a webpage: positioning elements, changing font and color, and adding spacing and borders between elements so that they don't cluster or overlap. 
+  **CSS** or **Cascading Style Sheets** allow you to swathe your humbly structured content in the vestments of your wildest dreams - as long as you know what you're doing. In taking down the analogy a notch, CSS also lets you do all the basic necessities of formatting a webpage: positioning elements, changing font and color, and adding spacing and borders between elements so that they don't cluster or overlap.
 
   It probably goes without saying: if HTML is the skeletal structure of your webpage, CSS is the makeup, the clothing, the *aesthetic* of your site.
 
@@ -49,8 +49,8 @@
 
   > EVERYTHING CASCADES.
   >
-  > All the rules of the highest block cascade until another later rule 
-  > overrides it (ie. when a block element is hit). Then the rules of the body 
+  > All the rules of the highest block cascade until another later rule
+  > overrides it (ie. when a block element is hit). Then the rules of the body
   > or the rules specified for that element apply.
 
   If, for example, I wanted to emphasize the word "CSS" inside the paragraph &lt;p&gt;CSS is not a trivial technology to learn&lt;/p&gt; by changing it to the color red, I would simply do the following:
@@ -61,7 +61,7 @@
   If I wanted to change the rest of the paragraph's text to a more muted color while keeping emphasis on the word "CSS", I could do so as well.
 
   ```
-  <p style="color:grey"> <span style="color:red">CSS</span> is not a trivial technology to learn</p>```  
+  <p style="color:grey"> <span style="color:red">CSS</span> is not a trivial technology to learn</p>```
 
   Try it out in practice [here](https://www.w3schools.com/code/tryit.asp?filename=FJOBT12AA066).
 
@@ -101,7 +101,7 @@
     color: red;
   }```
 
-  You can also group any selectors with the same properties like so: 
+  You can also group any selectors with the same properties like so:
 
   ```
   p, #para1, .center {
@@ -118,13 +118,13 @@
   CSS can be applied to a document in a number of ways, namely as *inline CSS*, through an *internal stylesheet*, or through an *external stylesheet*. The means of application should be a direct factor of **(1)** whether the same styling will be used again and **(2)** whether the applied styling will affect code readability (and by association, writeability).
 
   1. **Inline CSS** is applied directly to a single HTML element.
-  
+
   <img src="images/inline-css.png" alt="inline css">
 
   This method is the most direct application and works out great if you want to style a single element. However, it is not ideal in most cases, as it creates additional clutter in your HTML code and is harder to locate and maintain. The two following methods are often seen as better coding practice.
 
   2. **Internal Stylesheets** can be created within the HTML doc itself by inserting &lt;style&gt; tags.
-  
+
   <img src="images/internal-stylesheet.png" alt="internal stylesheet">
 
   This method allows you to work in the same file, but can have drawbacks if your file gets lengthy and readability is affected. Internal Stylesheets are often placed within the &lt;head&gt; tags of the file (the brain of the page!).

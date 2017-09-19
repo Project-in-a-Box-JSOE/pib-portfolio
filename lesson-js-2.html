@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>Project In A Box</title>
+
+<xmp theme="" style="display:none;">
+[Home](index.html)
+  ## Juggling Javascript: Part Two
+
+  [<< Previous Lesson](lesson-htmlcss-1.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-js-3.html)
+
+  So now that you know the basics of javascript,
+  its time to learn some practical applications of javascript.
+  Dom manipulation is one of the key points
+  in knowing how to make magic happen in web development
+
+  ####Lesson 1: Discovering the Dom
+  ```javascript
+      var tool = document.getElementById("tool");
+      console.log(tool.style.width);
+      tool.style.width = "100px";
+      // Anything with dots is a property
+      // You can set the property "width" of the "style" to
+      // Sth of this "50px"
+  ```
+
+  ####Exercise
+  Let's incorporate what we learned about
+  loops and variables from Lesson 1.
+
+  Here's some interesing info:
+  Given that when you use document.getElementsbyClassName()
+  an array of Dom Objects are returned, print out all
+  the dom objects in the following: <br/>
+  Open up the chrome developer tools with -> Right click "Inspect"
+  Try out the function with the input string "singularity"
+  The output you get from console should look like:
+
+
+  <div class="singularity" style="background-color: red; width:50px;">item 1</div>
+  <div class="singularity" style="background-color: red; width:50px;">item 2</div>
+  <div class="singularity" style="background-color: red; width:50px;">item 3</div>
+  <div class="singularity" style="background-color: red; width:50px;">item 4</div>
+  <div class="singularity" style="background-color: red; width:50px;">item 5</div>
+
+
+  ####Lesson 2: An Act of Creation
+  ```javascript
+  var element = document.createElement("div");
+  // Could be div, img, button, etc.
+  element.innerHTML = "some Text";
+  // Attach created node
+  document.querySelector("body").append(element);
+  ```
+
+  ####Exercise
+  Now that you know how to create new elements,
+  create programmatically the list of red numbers
+  from above.
+
+  Given: class of a div element you append to is called "frame"
+  <br/> Hint: You'll need to append 5 children to the given div
+
+  Challenge exercises:
+
+  <div class="frame"> I'm the Frame! </div>
+  ####Lesson 3: An Act of Creation
+
+
+
+
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+<script src="script.js"></script>
+</html>
