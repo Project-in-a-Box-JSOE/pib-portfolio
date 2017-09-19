@@ -8,11 +8,12 @@ NodeJS, and general web knowledge in a project-based approach.
 
 
 __Your ToolKit:__
-1. [Atom](https://atom.io/) - Choice Text Editor (Especially useful for learning javascript) Download Here .
-2. Git                      - Version Control, how we'll distribute files and projects.  Invaluable skill for a developer.
+1. [Atom](https://atom.io/) - Text Editor
+2. Git &nbsp &nbsp &nbsp - Version Control, how we'll distribute files and projects.  Invaluable skill for a developer.
+3. Chrome                   -
 
 
-__The Plan:__
+__The Plan:__  
 Structure of these lessons. Please go through these in the order, we promise there's a method to the madness, we go a little more in depth about topics.  
 
 They are self-contained and follow the following format:
