@@ -1,4 +1,4 @@
-#Lesson 1:
+####Lesson 1:
 
 In this lesson, we will learn the magic of javascript.
 To get started, open your atom editor, and start the console.  
@@ -39,17 +39,24 @@ to help you understand how your code is working.
 
 #### Variables<a name="variable"></a>
 In javascript, you don't need to explicitly name what type of variable you want to use.
-For Ex:
-var i = 0;
-var message = "Hello World";
-console.log(i + message); // This automatically casts your integer "i" into a string, and creates "0Hello World".
-
+The process is as follows:  
++ declaration keyword "var"  
++ name of variable   - human readable name.  Can be called in your code
++ value of variable  - Program callable value.  Can be called through your variable name  
+For example, type the following into your console, one line at a time:
+Try to read from *right to left* as follows:
+```
+    var i = 0;   // I've assigned
+    var message = "Hello World";
+    console.log("I have just assigned variable i the value " + i);  
+    console.log(i + message); // This automatically turns your integer "i" into a string, and creates "0Hello World".
+```
 
 #### Loops And Conditionals<a name="loop"></a>
-Loops allow a programmer to not repeat lines.
-Imagine if you needed to print "I'm Alive!" 1000 times.
-Without Loops, that would be 1000 lines of code.  With a loop, it would look
-like this:
+Loops allow a programmer to not repeat lines.  
+Imagine if you needed to print "I'm Alive!" 1000 times.  
+Without Loops, that would be 1000 lines of code.  
+With a loop, it would look like this:  
 ```
 for (var i = 0; i < 1000; i++){  
   console.log("I'm Alive! Its the" + i + "nth  
@@ -57,12 +64,12 @@ for (var i = 0; i < 1000; i++){
 }
 ```
 
-Lets break this down, in javascript, this  
-for loop will take in 3 parameters that control  
+Lets break this down, in javascript, this for loop will take in 3 parameters that control  
 how long to run the loop.  
 First, we create a counter and set it to 0.  
-Second, we state the *Condition* that the counter   must be less than 1000.
-Third, we have the increment, where you set how you control the function.  By putting i++, we are telling the program to increment i by 1 for each
+Second, we state the *Condition* that the counter   must be less than 1000.  
+Third, we have the increment, where you set how you control the function.    
+By putting i++, we are telling the program to increment i by 1 for each
 iteration of the loop.
 
 In Summary, this should loop 1000 times, starting
@@ -91,6 +98,8 @@ for (int i = 0; i < arrayLength; i++ ){
 ```
 
 
+Analyzing the above, we should be reading it as so:
+```
 
 
 <a name="function"></a>
