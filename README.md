@@ -23,7 +23,7 @@ ___
 * [Part 3]("https://google.com")
 ___
 #### Juggling Javascript
-* [Intro]("")
-* [Part 1](lesson-js-1.html)
-* [Part 2]("https://google.com")
-* [Part 3]("https://google.com")
+* [Intro]("https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript")
+* [Part 1]("https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-1")
+* [Part 2]("https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-2")
+* [Part 3]("https://github.com/notoriousnapper/pib-portfolio/tree/javascript/Lesson3/javascript/lesson-3")
