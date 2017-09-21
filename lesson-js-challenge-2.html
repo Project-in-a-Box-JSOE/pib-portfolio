@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<title>Project In A Box</title>
+
+<xmp theme="" style="display:none;">
+
+[Home](index.html)
+[<< Previous Lesson](lesson-js-2.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-js-3.html)
+
+# Final-Project: To-Do List
+<img src="images/task-list.png" alt="">
+<br/>
+This will be a project that incorporate everything taught so far.
+Because of the length of the project, I've broken up the project into parts.
+
+####The Goal:
+The goal is to create a to-do list that is stores task items in a database
+so the information persists.
+
+0. You will create html and css that mirrors the given picture above.
+1. You will add task items by the add button,
+and the visual will display the newly added item.
+2. Additionally, you should be able to delete task items visually as well.
+3. Finally, the list items added or deleted should reflect a change in the database
+
+Refer to the following completed site for behavior:
+[task-list](https://task-to-do.herokuapp.com/)
+
+####The Concepts:
+- Variables
+- Loops
+- Dom Manipulating
+- Functions
+- String Manipulation
+- Css Knowledge
+
+Get the starter code by checking out the branch
+"js-challenge-2" Make sure to save your current work first
+```
+git add * // Or the name of your specific files
+git commit -m "Learned Dom Manipulation"
+git push
+
+// Time to checkout new code
+git checkout js-challenge-2
+
+```
+
+Read through the instructions and hints,
+and try to get to the result below.
+
+
+If you get absolutely stuck and can't get any help,
+There are hints and solution code at the js-challenge-2-solution branch.
+Make sure to add, commit, and push to save!
+```
+    git checkout js-challenge-2
+```
+
+
+
+Part 1: Making the HTML
+<img src="images/task-wireframe.png" alt="">
+First, its a good idea to break down the given picture and
+plan out your code.
+
+
+```html
+<!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+    <body>
+      <div class="frame">
+        <div class="entry">
+          <input type="text" id="entry-bar" class="entry-bar" placeholder="">
+          <button class="add-btn">
+          </button>
+        </div>
+          <div class="board-label"> Task Board </div>
+          <div class="task-list"></div>
+      </div>
+    </body>
+    </html>
+```
+
+With the above, you've lain out the hierarchy of dom elements,
+setting a good framework for your styling.
+
+However, if you just display the above, you won't get anything, because
+you haven't styled anything.
+Here's what I usually do after the first step:
+I add padding and borders, as well as minimal content, and make
+sure that everything looks like the wireframe (without font or a color scheme) above.
+
+
+
+
+
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+<script src="script.js"></script>
+</html>
