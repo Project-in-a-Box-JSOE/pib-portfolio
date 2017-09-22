@@ -43,52 +43,8 @@ N/A
 Laptop Computer
 
 ## Outline
-1. World-Wide Web Works
-	* How the Internet Works
-	* Playing with the DOM
+1. Set Up
+2. Introduction
 2. HTML/CSS Exercises
-3. Juggling Javascript
-4. Building your own Web Application
-5. Resources
+3. Javascript Exercises (including Building your own Web Application)
 
-
-Questions To
-HTML/ CSS
-- Basic Tags
-- What it is (nodes), How it works
-- CSS - Tips (And references)
-- 3 exercises ------------------->
-1. Create a mini-blog
-  Extra: With Color & Nice Font
-2. Fun with Links
-3. Attempt to Create something given a picture
-
-    CSS
-      Positioning
-      Margin, Padding, Border, Common Pitfalls [Less headaches]
-      Font
-
-      classes vs ids
-
-
-
-Pure Javascript
-- Loops & Conditionals
-- Variables
-- Debuggng/ Accessing Dom
-- 3 exercises ------------------->
-
-1.
-2.
-3. Create a mini-web app
-BootStrap
-
-
-Server - Stuff?
-
-
-
-Portfolio
-- Design & Prototype
--
->>>>>>> 21fc2d71afd55ed0a78737afb0985ad67a491f0b

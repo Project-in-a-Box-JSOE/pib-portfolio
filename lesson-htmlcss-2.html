@@ -10,7 +10,7 @@
 
   [<< Previous Lesson](lesson-htmlcss-1.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-htmlcss-3.html)
 
-  ### CSS: Clearly Stylish? Si.
+  ### CSS: Clearly Stylish? Surely.
 
   > "CSS is not a trivial technology to learn, there are literally 100s of 
   > properties to master and many of the usage of many of these properties is 
@@ -102,7 +102,7 @@
     color: red;
   }```
 
-  Knowing how and when to use selectors is a great way to save yourself work in CSS, since you can control the layout of multiple webpages and a lot of the code can be reused across multiple sections.
+Knowing how and when to use selectors is a great way to save yourself work in CSS, since you can control the layout of multiple webpages and a lot of the code can be reused across multiple sections.
 
   ___
   <a name="exinternal"></a>
@@ -132,22 +132,119 @@
 
   This is often the most preferred means of applying CSS to a file, since separate types of code are modularized and a single CSS file can be applied to multiple HTML pages through simple linking.
 
+  <br>
+  #### <span style="color:red">Challenge #1: A Splash of Color</span> <br>
+
   ___
   <a name="pbm"></a>
   #### Padding and Borders and Margins, Oh My!
 
-  Here is where CSS gets fun, or tricky, depending on who you ask. 
+  Here is where CSS gets fun, or tricky, depending on who you ask. As you advance with your knowledge of web development, you can use frameworks like Bootstrap that automatically set positioning and spacing for you, since one can spend hours trying to align all the different sized and shaped elements in perfect harmony.
+
+  Let's start with the basics - everything in CSS **spacing** revolves around the **box model**, shown below.
 
   <img src="images/margin-order.jpg" alt="Margin Order" style="height: 50%; width: 50%">
-  <br><span style="color:grey">Source: monc.se</span>
+  <br><span style="color:grey">Source: [monc.se](http://monc.se/kitchen/38/cascading-order-and-inheritance-in-css)</span>
+
+  Your content, a box, is inherently enveloped in three other boxes: 
+
+  * the [**padding**](https://www.w3schools.com/css/css_padding.asp) box, which is transparent and denotes the area around the content, resides inside 
+  * the [**border**](https://www.w3schools.com/css/css_border.asp) box, which is opaque when defined, resides inside 
+  * the [**margin**](https://www.w3schools.com/css/css_margin.asp) box, the transparent area that denotes the outside of the border
+
+<span style="color:blue">Quick Tip: </span>Each of these attributes can be altered for *any one side of the box*, margin-left or padding-top, for example. 
+
+```
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 25px solid green;
+  padding: 25px;
+  margin: 25px;
+}``` 
+
+  Note that in the example above, the metric "px" on each line denotes *pixels*, the unit of measurement used to denote the width of each section. The word "solid" under the border attribute defines *border-style*, which can be *solid*, *dotted*, *dashed*, or *double*, among other things. Test out the usage of each of these items [here](https://www.w3schools.com/css/tryit.asp?filename=trycss_boxmodel).
 
   ___
-  <a name="fonts"></a>
-  #### Fontastic Beasts, and How to Make Them
 
-  It's nearly impossible to know every feasible CSS attribute and attribute value out there, but here's [a good reference that encompasses everything you need](https://www.onblastblog.com/css3-cheat-sheet/).
+  Knowledge of the box model and how to use spacing to your advantage lets you **change the positioning** of your elements for the first time in this course. Want to move something a little further to the right? Just set your *margin-left* and/or *padding-left* to a higher pixel count. Centering elements requires an equal pixel count of both on left and right sides.
 
-  [<< Previous Lesson](lesson-htmlcss-1.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-htmlcss-3.html)
+  Diving a little further into *positioning* in CSS, let's introduce the **position** property, the specifier of an element's type of positioning method.
+
+  There exist five different position values:
+
+  <img src="images/css-positioning.jpg" alt="CSS positioning" style="height: 100%; width: 100%">
+  <br><span style="color:grey">Source: [GitHub: euniceschoi](https://github.com/euniceschoi/euniceschoi/blob/master/blog/css-concepts.html)</span>  
+
+  1. [**static**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_static), the HTML default property, is not affected by top, bottom, left, and right properties
+  2. [**relative**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_relative), which positions an element relative to its normal position and is affected by changing the TBLR properties. Other content will *not* change to fit the spaces left by a relatively positioned element.
+  3. [**fixed**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed) ensures that the element will always stay in the same place, even when the page is scrolled. A fixed element does not leave a gap in the page where it would've conventionally be located (it overlaps with other elements) and is affected by the TBLR properties.
+  4. [**absolute**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute) positioning positions the element relative to the elements nearest positioned ancestor instead of relative to the viewport, like a *fixed* element may be. Use of this positioning tag is advised against.
+  5. [**sticky**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_sticky) positioning, often popular for menu bars in many contemporary websites, toggles between keeping its element *relative* and *fixed* based on the user's scroll position. You must specify at least one of the TBLR properties in order for sticky positioning to work.
+
+<span style="color:blue">Quick Tip: </span> The **z-index** property of an element, an outlier to the main five position values, allows you to create overlapping elements and prioritize which ones come out on top. A z-index of **-1** will move that element to the back if no smaller z-index elements exist, whereas a z-index of **1** will move the associated element forward (relative to other elements with smaller z-index values).
+
+
+<br>
+#### <span style="color:red">Challenge #2: So What's Your Position on That?</span> <br>
+
+
+___
+<a name="fonts"></a>
+#### Fontastic Beasts, and How to Make Them
+
+  As expansive as CSS allows you to be when styling your site (and there are countless cool new features that CSS3 offers that will remain uncovered here), perhaps the last major frontier to pioneer for the purposes of this lesson are **CSS fonts** and text alteration, a child node of the larger styling applied to elements and divs.
+
+  The four main CSS font properties are **font family**, **boldness**, **size**, and **style** of a text.
+
+  * **Font Family** can be either generic (*serif*, *sans serif*, or *monospace*) or specific (*Times New Roman*, *Arial*, *Courier New*, and other basic font names)
+
+  <img src="images/font-family.gif" alt="Font Family" style="height: 50%; width: 50%">
+  <br><span style="color:grey">Source: [w3 schools](https://www.w3schools.com/css/css_font.asp)</span>
+
+<br>
+
+  | Generic Family | Specific Families |
+  | -------------- | ----------------- |
+  | Serif          | Times New Roman, Georgia |
+  | Sans Serif     | Arial, Verdana |
+  | Monospace      | Courier New, Lucida Console |
+
+  When declaring the font-family property, it is good practice to use several names as a fallback system, so that the browser can use the subsequent fonts if it does not support the first, like [so](https://www.w3schools.com/css/tryit.asp?filename=trycss_font-family).
+
+  ```
+  p {
+    font-family: "Times New Roman", Times, serif;
+  }```
+
+  Another good alternative to this is linking your stylesheet to one of Google's many font APIS by inserting this line at the top of your CSS file. Make sure you checkout [fonts.google.com](http://fonts.google.com) in advance to select a font or font pairing you may like.
+
+  <span style="color:blue">Quick Tip: </span> Sans serif fonts are usually seen as easier to read in browser. It is also advised that you use no more than two fonts on any page at a time in order to maintain uniform, good design. For help on how to choose fonts that go well together, check out [Font Pair](http://fontpair.co/#).
+
+  ```
+  @import url('https://fonts.googleapis.com/css?family=First+Font+Here|Yet+Another+Font');
+
+  body{
+    font-family: 'First Font Here', sans-serif;
+  }
+
+  h1, h2{
+    font-family: 'Yet Another Font', serif;
+  }```
+  
+  * **Boldness** of a font can be defined through 
+
+  * **Font-Size** can be set through *absolute* means (through pixels) or through *relative* means (through percentage).
+
+  * **Font-Style** is a trivial property mostly used to specify italic text. Its three values are *normal*, *italic*, and *oblique* (where the text is similar to italic, but supported on fewer browsers).
+
+<br>
+#### <span style="color:red">Challenge #3: Turning your Fontasy into a Reality </span> <br>
+
+In closing, it's nearly impossible to know every feasible CSS attribute and attribute value out there, but here's [a good reference that encompasses everything you may need](https://www.onblastblog.com/css3-cheat-sheet/). Read through it, play with new attributes you haven't touched before, and keep revising your portfolio until you're content with your outfit du jour :) .
+
+
+[<< Previous Lesson](lesson-htmlcss-1.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-htmlcss-3.html)
 
 </xmp>
 
