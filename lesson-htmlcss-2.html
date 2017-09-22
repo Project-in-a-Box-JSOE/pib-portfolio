@@ -232,11 +232,27 @@ ___
     font-family: 'Yet Another Font', serif;
   }```
   
-  * **Boldness** of a font can be defined through 
+  * **Boldness** of a font can be defined through the [**font-weight**](https://www.w3schools.com/css/tryit.asp?filename=trycss_font-weight) property. The value of font-weight can be set using either the keywords *lighter*, *normal*, *bold*, or *bolder*, or using multiples of 100 from '100' to '900' (100 being the lightest and 900 being the thickest).
 
-  * **Font-Size** can be set through *absolute* means (through pixels) or through *relative* means (through percentage).
+  <img src="images/font-weight.jpg" alt="Font Weight" style="height: 50%; width: 50%">
+  <br><span style="color:grey">Source: [Clagnut](http://clagnut.com/blog/2228)</span>  
 
-  * **Font-Style** is a trivial property mostly used to specify italic text. Its three values are *normal*, *italic*, and *oblique* (where the text is similar to italic, but supported on fewer browsers).
+  * [**Font-Size**](https://www.w3schools.com/code/tryit.asp?filename=FJS1TXK6XN84) can be set through *absolute* means (through pixels or em) or through *relative* means (through percentage). One of the drawbacks to absolute sizing is that it does not allow the user to change the text size in all browsers, so relative sizing is usually recommended for development purposes.
+
+  ```
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 1.875em; /* 30px/16=1.875em */
+  }
+
+  p {
+    font-size: 75%;
+  }```
+
+  * **Font-Style** is a trivial property mostly used to specify italic text. Its three values are *normal*, *italic*, and *oblique* (where the text is similar to italic, but supported on fewer browsers). 
 
 <br>
 #### <span style="color:red">Challenge #3: Turning your Fontasy into a Reality </span> <br>
