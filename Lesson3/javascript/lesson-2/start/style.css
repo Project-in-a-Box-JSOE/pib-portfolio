@@ -1,0 +1,35 @@
+* {
+  margin:0;padding:0;border:0 none;position: relative; outline: none;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  padding: 10% 15%;
+  background-color: #79B2EA;
+}
+
+.box {
+  /*background-size : cover;
+  width : 200px;
+  height : 200px;
+  background-color : #B1AFAE;
+  display : inline-block;*/
+}
+
+#frame {
+  width: 80%;
+  height: 80%;
+  float: left;
+}
+
+#textBox {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 100px;
+  height: 100px;
+}
