@@ -17,7 +17,8 @@ Because of the length of the project, I've broken up the project into parts.
 
 ####The Goal:
 The goal is to create a to-do list that is stores task items in a database
-so the information persists.
+so the information persists. This is a web-app that makes requests
+to a server that you write, and ties together everything taught so far.
 
 0. You will create html and css that mirrors the given picture above.
 1. You will add task items by the add button,
@@ -27,14 +28,6 @@ and the visual will display the newly added item.
 
 Refer to the following completed site for behavior:
 [task-list](https://task-to-do.herokuapp.com/)
-
-####The Concepts:
-- Variables
-- Loops
-- Dom Manipulating
-- Functions
-- String Manipulation
-- Css Knowledge
 
 Get the starter code by checking out the branch
 "js-challenge-2" Make sure to save your current work first
@@ -54,6 +47,9 @@ and try to get to the result below.
 
 If you get absolutely stuck and can't get any help,
 There are hints and solution code at the js-challenge-2-solution branch.
+Good Luck!
+
+#### Let's Get Started
 Make sure to add, commit, and push to save!
 ```
     git checkout js-challenge-2
@@ -118,11 +114,87 @@ Let's translate this into javascript:
 
 #### Part 3: Server Code
 Let's start the server code
+First, set up the server to serve code on the route.
+If you forgot, feel free to refer back to the [server tutorial](lesson-js-3.html)
+Everything from Part 1 and 2 should still be seen on localhost:8080
 
+
+Check Point:
+[ Show Image of evidence of local host ]
+
+
+Now, its time to get a mongodb server running.
+Go to [mlab.com](https://mlab.com) and set up an account, and get the
+user password.
+[ Show Image of Information ]
+
+
+Given that, its time to download the packages.
+npm install mongodb --save
+Here are the steps needed
+1. Get Mongo Client
+2. Authenticate your Credentials and connect with database
+3. Attach a database "Post Call" and get a request testing (Post Man)
+4. Allow your front-end code to make a request to server (a POST request)
+5. Test Routes w/ PostMan
+
+[ Show all code as skeletons ]
+
+Here's what the completed code looks like:
+```javascript
+    var express = require('express');
+    var app = express();
+    var path = require('path');
+
+    const port = process.env.PORT || 8080;
+
+    /* Setting up Mongo client */
+
+    const MongoClient = require('mongodb').MongoClient;
+    var bodyParser = require('body-parser');
+    var morgan = require('morgan');
+
+
+    MongoClient.connect('mongodb://pibtuts:pibtutswutsup321@ds147900.mlab.com:47900/mobewash',
+    (err, database) => {
+      if (err) return console.log(err)
+      else {
+        console.log("Connected With DB");
+        db = database;
+        app.use(bodyParser.urlencoded({ extended: true}));
+        app.use(bodyParser.json());
+        app.use(morgan('dev'));
+      }
+    });
+
+    app.use("/", express.static(path.join(__dirname, ''))); // Serve static files
+    app.get('/', function(req, res){
+      res.sendFile(path.join(__dirname + '/index.html'));
+    });
+
+    app.route('/task')
+    app.listen(port, () => {
+      console.log('listening on port')
+    });
+```
+
+Our Next step will be setting up the routes
+Recall the operations:
+
+- GET  - Get all the available tasks
+- POST - Add a New Task
+- PUT  - Update a previous Task
+- DELETE - Delete a Saved Task (Complete a Task)
+```
+
+
+
+```
 
 
 
 [<< Previous Lesson](lesson-js-challenge.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-js-3.html)
+
 
 </xmp>
 
