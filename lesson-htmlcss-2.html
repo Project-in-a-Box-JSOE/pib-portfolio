@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <title>Project In A Box</title>
-
 <xmp theme="" style="display:none;">
 
 [Home](index.html)
@@ -10,20 +9,12 @@
 
   [<< Previous Lesson](lesson-htmlcss-1.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-htmlcss-3.html)
 
-  ### CSS: Clearly Stylish? Si.
+  ### CSS: Clearly Stylish? Surely.
 
-  > "CSS is not a trivial technology to learn, there are literally 100s of
-  > properties to master and many of the usage of many of these properties is
-  > not straight forward. To further complicate matters we find that browser
-  > support for CSS can be quite erratic and the use of vendor prefixed
-  > properties (ex. -webkit-) is not uncommon, but generally required.
-  > Presentation is quite important so given the complexity of implementing
-  > designs using CSS many aspiring Web developers give up and adopt CSS
-  > frameworks such as Twitter Bootstrap. This is not a surprising outcome as
-  > developer productivity can be significantly improved using a CSS framework,
-  > though this gain often comes at the expense of unique design and reduced
-  > performance."
-  >
+  > "CSS is not a trivial technology to learn, there are literally 100s of 
+  > properties to master and many of the usage of many of these properties is 
+  > not straight forward."
+  >  
   > <span style="color:grey">- Professor Thomas Powell, UCSD</span>
 
   Now that we have a white-and-black form standing before us, it'd probably be in our best interest to clothe and align the poor thing. More than that, we want to make it the belle of the ball - would you rather engage the white t-shirt blue jeans flavor of your content or something wrapped in a Versace gown?
@@ -32,14 +23,15 @@
 
   It probably goes without saying: if HTML is the skeletal structure of your webpage, CSS is the makeup, the clothing, the *aesthetic* of your site.
 
-  <img src="images/Portfolio.png" alt="Cascading" style="height: 25%; width: 25%">
+  <img src="images/css-cheat-sheet.png" alt="Cascading" style="height: 50%; width: 50%;">
+    <br><span style="color:grey">Source: [The Blog Market](http://www.theblogmarket.co/intro-to-css-why-you-should-use-it/)</span>
 
   ####Concepts
   * ["Cascading" - What's that All About?](#cascade)
   * [Selectors](#selectors)
   * [Applying CSS to your HTML Document](#exinternal)
-  * [Padding, Borders, and Margins](#pbm)
-  * [Fontastic Beasts](#fonts)
+  * [Padding and Borders and Margins, Oh My!](#pbm)
+  * [Fontastic Beasts, and How to Make Them](#fonts)
 
   ___
   <a name="cascade"></a>
@@ -109,7 +101,7 @@
     color: red;
   }```
 
-  Knowing how and when to use selectors is a great way to save yourself work in CSS, since you can control the layout of multiple webpages and a lot of the code can be reused across multiple sections.
+Knowing how and when to use selectors is a great way to save yourself work in CSS, since you can control the layout of multiple webpages and a lot of the code can be reused across multiple sections.
 
   ___
   <a name="exinternal"></a>
@@ -139,22 +131,220 @@
 
   This is often the most preferred means of applying CSS to a file, since separate types of code are modularized and a single CSS file can be applied to multiple HTML pages through simple linking.
 
+  <br>
+  #### <span style="color:red">Challenge #1: A Splash of Color</span> <br>
+  Let's breathe some life into your HTML skeleton! Before starting this challenge, you will need to pick colors for the **background** of your page, for your **header text**, and for **all other text**. You can check out a comprehensive list of CSS preset colors [here](https://www.w3schools.com/cssref/css_colors.asp), or you can use [Google's own color picker](https://www.google.com/search?q=color+picker&oq=color+picker&gs_l=psy-ab.3..0i71k1l4.0.0.0.359600.0.0.0.0.0.0.0.0..0.0....0...1..64.psy-ab..0.0.0....0.nuKnxyREyq4) for a specific hex code for your color of choice.
+
+  Once you've chosen colors, make a new *CSS External Stylesheet* by opening up a new file and saving it with a **.css** suffix. Take the following code and input your names and/or hex values accordingly:
+
+  ```
+  body{
+    color: ___;       /* This denotes font color */
+    background: ___;  /* This denotes background color */
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    color: ___;
+  }```
+
+  Now go back to your HTML page, and within the "head" tags, type the following, filling in any blanks with your file name.
+
+  ```
+      <link type="text/css" rel="stylesheet" href="___">```
+
+  This will link your HTML file to your external CSS file. When you open your HTML file in browser again, it should look something like this, colors not withstanding:
+
+  <img src="images/html-page-4.png" alt="Example HTML in Browser with Picture and Color" style="height: 50%; width: 50%; border: solid;">
+  <br><span style="color:grey">Header Text: Chocolate, All Other Text: BurlyWood, Background: SeaShell</span>
+
+  <span style="color:red">Bonus Challenge 1A: </span> Add CSS code that would change the color of (1) any links on the page and (2) the background of the links within your navigation bar specifically. For part 2, recall the different types of CSS selectors.
+
   ___
   <a name="pbm"></a>
-  #### Padding, Borders, and Margins
+  #### Padding and Borders and Margins, Oh My!
+
+  Here is where CSS gets fun, or tricky, depending on who you ask. As you advance with your knowledge of web development, you can use frameworks like Bootstrap that automatically set positioning and spacing for you, since one can spend hours trying to align all the different sized and shaped elements in perfect harmony.
+
+  Let's start with the basics - everything in CSS **spacing** revolves around the **box model**, shown below.
 
   <img src="images/margin-order.jpg" alt="Margin Order" style="height: 50%; width: 50%">
-  <br><span style="color:grey">Source: monc.se</span>
+  <br><span style="color:grey">Source: [monc.se](http://monc.se/kitchen/38/cascading-order-and-inheritance-in-css)</span>
+
+  Your content, a box, is inherently enveloped in three other boxes: 
+
+  * the [**padding**](https://www.w3schools.com/css/css_padding.asp) box, which is transparent and denotes the area around the content, resides inside 
+  * the [**border**](https://www.w3schools.com/css/css_border.asp) box, which is opaque when defined, resides inside 
+  * the [**margin**](https://www.w3schools.com/css/css_margin.asp) box, the transparent area that denotes the outside of the border
+
+<span style="color:blue">Quick Tip: </span>Each of these attributes can be altered for *any one side of the box*, margin-left or padding-top, for example. 
+
+```
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 25px solid green;
+  padding: 25px;
+  margin: 25px;
+}``` 
+
+  Note that in the example above, the metric "px" on each line denotes *pixels*, the unit of measurement used to denote the width of each section. The word "solid" under the border attribute defines *border-style*, which can be *solid*, *dotted*, *dashed*, or *double*, among other things. Test out the usage of each of these items [here](https://www.w3schools.com/css/tryit.asp?filename=trycss_boxmodel).
 
   ___
-  <a name="fonts"></a>
-  #### Fontastic Beasts
 
-  It's nearly impossible to know every feasible CSS attribute and attribute value out there, but here's [a good reference that encompasses everything you need](https://www.onblastblog.com/css3-cheat-sheet/).
+  Knowledge of the box model and how to use spacing to your advantage lets you **change the positioning** of your elements for the first time in this course. Want to move something a little further to the right? Just set your *margin-left* and/or *padding-left* to a higher pixel count. Centering elements requires an equal pixel count of both on left and right sides.
 
-  [<< Previous Lesson](lesson-htmlcss-1.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-htmlcss-3.html)
+  Diving a little further into *positioning* in CSS, let's introduce the **position** property, the specifier of an element's type of positioning method.
+
+  There exist five different position values:
+
+  <img src="images/css-positioning.jpg" alt="CSS positioning" style="height: 100%; width: 100%">
+  <br><span style="color:grey">Source: [GitHub: euniceschoi](https://github.com/euniceschoi/euniceschoi/blob/master/blog/css-concepts.html)</span>  
+
+  1. [**static**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_static), the HTML default property, is not affected by top, bottom, left, and right properties
+  2. [**relative**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_relative), which positions an element relative to its normal position and is affected by changing the TBLR properties. Other content will *not* change to fit the spaces left by a relatively positioned element.
+  3. [**fixed**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_fixed) ensures that the element will always stay in the same place, even when the page is scrolled. A fixed element does not leave a gap in the page where it would've conventionally be located (it overlaps with other elements) and is affected by the TBLR properties.
+  4. [**absolute**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute) positioning positions the element relative to the elements nearest positioned ancestor instead of relative to the viewport, like a *fixed* element may be. Use of this positioning tag is advised against.
+  5. [**sticky**](https://www.w3schools.com/css/tryit.asp?filename=trycss_position_sticky) positioning, often popular for menu bars in many contemporary websites, toggles between keeping its element *relative* and *fixed* based on the user's scroll position. You must specify at least one of the TBLR properties in order for sticky positioning to work.
+
+<span style="color:blue">Quick Tip: </span> The **z-index** property of an element, an outlier to the main five position values, allows you to create overlapping elements and prioritize which ones come out on top. A z-index of **-1** will move that element to the back if no smaller z-index elements exist, whereas a z-index of **1** will move the associated element forward (relative to other elements with smaller z-index values).
+
+<span style="color:blue">Quick Tip: </span> Did you know that a number of websites abide by an "F-layout" principle, where all their content falls in such a way that users can grasp most of the information they need at first glance by scanning the page in an "F" formation? Eyetracking studies show that users tend to linger on the left side of the screen, making this the optimal place to put the important elements of your site. Read more about it [here](https://webdesign.tutsplus.com/articles/understanding-the-f-layout-in-web-design--webdesign-687).
+
+<img src="images/f-layout-2.jpg" alt="F-layout" style="height: 50%; width: 50%">
+<br><span style="color:grey">Source: [Tutorials Plus: Web Design](https://webdesign.tutsplus.com/articles/understanding-the-f-layout-in-web-design--webdesign-687)</span> 
+
+
+<br>
+#### <span style="color:red">Challenge #2: So What's Your Position on That?</span> <br>
+The time has come to shake up the content of your page from its boring word document standard left align. For starters, lets move all our key information (name, title, picture, introductory paragraph) to the center of the page. Let's surround all of these attributes in a **div** tag and add a **main** class attribute to it.
+
+```
+<div class="main">
+  <h1>Page Webb</h1>
+  <h2> Web Developer Extraordinaire In-the-Making</h2>
+  <img src="images/page.jpg" alt="Page" style="width: 10%; height: 10%">
+  <p>Hi! My name is Page, and I love making websites and going out to brunch.</p>
+</div>```
+
+Now we can whip up some of the positional CSS for these.
+
+```
+.main{  
+  margin: auto;       /* Sets the margins to equal on both sides */
+  text-align: center; /* Keeps the text centered, not left aligned at the center of the page */
+  padding: ___ px;    /* Ensures that longer lines of text don't stretch out to borders */
+}```
+
+Try doing something similar for the "Skills" and "Projects" sections as well, by surrounding both categories in a **.sections** tag.
+
+```
+.sections{
+        margin: ___;
+        width: ___;   /* Centering will not be effective if this is set to 100%, or not set at all */
+        padding: ___;
+}
+```
+
+You can also try applying this same styling to your menu bar if you wish.
+
+Try expanding and compressing your browser window a few times as well and notice how everything stays centered without having overlapping or cut off elements. This feature is called **responsiveness**, meaning that your site can be viewed on any device or differently-sized browser window without breaking. Good web development practice dictates that your site should always be responsive, so be sure to check this from time to time.
+
+At the conclusion of this exercise, your site, if centered, should look something like this.
+
+<img src="images/html-page-5.png" alt="Example HTML in Browser with positioning" style="height: 50%; width: 50%; border: solid;">
+
+<span style="color:red">Bonus Challenge 2A: </span> Add CSS code that would make your "Skills" and "Projects" sections side-by-side, rather than stacked. Add borders around both.
+
+<span style="color:red">Bonus Challenge 2B: </span> You may have noticed the shrinking of your picture in the process of this exercise. How would you go about fixing this?
+
+
+___
+<a name="fonts"></a>
+#### Fontastic Beasts, and How to Make Them
+
+  As expansive as CSS allows you to be when styling your site (and there are countless cool new features that CSS3 offers that will remain uncovered here), perhaps the last major frontier to pioneer for the purposes of this lesson are **CSS fonts** and text alteration, a child node of the larger styling applied to elements and divs.
+
+  The four main CSS font properties are **font family**, **boldness**, **size**, and **style** of a text.
+
+  * **Font Family** can be either generic (*serif*, *sans serif*, or *monospace*) or specific (*Times New Roman*, *Arial*, *Courier New*, and other basic font names)
+
+  <img src="images/font-family.gif" alt="Font Family" style="height: 50%; width: 50%">
+  <br><span style="color:grey">Source: [w3 schools](https://www.w3schools.com/css/css_font.asp)</span>
+
+<br>
+
+  | Generic Family | Specific Families |
+  | -------------- | ----------------- |
+  | Serif          | Times New Roman, Georgia |
+  | Sans Serif     | Arial, Verdana |
+  | Monospace      | Courier New, Lucida Console |
+
+  When declaring the font-family property, it is good practice to use several names as a fallback system, so that the browser can use the subsequent fonts if it does not support the first, like [so](https://www.w3schools.com/css/tryit.asp?filename=trycss_font-family).
+
+  ```
+  p {
+    font-family: "Times New Roman", Times, serif;
+  }```
+
+  Another good alternative to this is linking your stylesheet to one of Google's many font APIS by inserting an import line at the top of your CSS file. Make sure you checkout [fonts.google.com](http://fonts.google.com) in advance to select a font or font pairing you may like.
+
+  <span style="color:blue">Quick Tip: </span> Sans serif fonts are usually seen as easier to read in browser. It is also advised that you use no more than two fonts on any page at a time in order to maintain uniform, good design. For help on how to choose fonts that go well together, check out [Font Pair](http://fontpair.co/#).
+  
+  * **Boldness** of a font can be defined through the [**font-weight**](https://www.w3schools.com/css/tryit.asp?filename=trycss_font-weight) property. The value of font-weight can be set using either the keywords *lighter*, *normal*, *bold*, or *bolder*, or using multiples of 100 from '100' to '900' (100 being the lightest and 900 being the thickest).
+
+  <img src="images/font-weight.jpg" alt="Font Weight" style="height: 50%; width: 50%">
+  <br><span style="color:grey">Source: [Clagnut](http://clagnut.com/blog/2228)</span>  
+
+  * [**Font-Size**](https://www.w3schools.com/code/tryit.asp?filename=FJS1TXK6XN84) can be set through *absolute* means (through pixels or em) or through *relative* means (through percentage). One of the drawbacks to absolute sizing is that it does not allow the user to change the text size in all browsers, so relative sizing is usually recommended for development purposes.
+
+  ```
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 1.875em; /* 30px/16=1.875em */
+  }
+
+  p {
+    font-size: 75%;
+  }```
+
+  * **Font-Style** is a trivial property mostly used to specify italic text. Its three values are *normal*, *italic*, and *oblique* (where the text is similar to italic, but supported on fewer browsers). 
+
+<br>
+#### <span style="color:red">Challenge #3: Turning your Fontasy into a Reality </span> <br>
+Let's apply your fonts of choice as a means of polishing up your final site. Using the font sites mentioned above, choose one font for all your header text and another font for all other text. Apply to the top of your CSS file like so:
+
+```
+@import url('https://fonts.googleapis.com/css?family=First+Font+Here|Yet+Another+Font');```
+
+Then, add them to your CSS elements specifically.
+
+```
+body{
+  font-family: 'First Font Here', ___;
+  font-size: ___;
+  font-weight: ___;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Yet Another Font', ___;
+  font-weight: ___;
+}```
+
+Compare your final product to the one shown here.
+
+<img src="images/html-page-6.png" alt="Example HTML in Browser with Fonts" style="height: 50%; width: 50%; border: solid;">
+
+___
+In closing, it's nearly impossible to know every feasible CSS attribute and attribute value out there, but here's [a good reference that encompasses everything you may need](https://www.onblastblog.com/css3-cheat-sheet/). Read through it, play with new attributes you haven't touched before, and keep revising your portfolio until you're content with your outfit du jour :) .
+
+
+[<< Previous Lesson](lesson-htmlcss-1.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-htmlcss-3.html)
 
 </xmp>
+</body>
 
 <script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
 </html>
