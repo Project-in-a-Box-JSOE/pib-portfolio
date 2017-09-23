@@ -10,7 +10,7 @@
 # Final-Project: To-Do List
 <img src="images/task-list.png" alt="">
 <br/>
-This will be a project that incorporate everything taught so far.
+This will be a project that incorporate everything taught so far. <br/>
 Because of the length of the project, I've broken up the project into parts.
 
 ####The Goal:
@@ -59,7 +59,7 @@ Make sure to add, commit, and push to save!
 
 
 
-Part 1: Making the HTML
+####Part 1: Making the HTML
 <img src="images/task-wireframe.png" alt="">
 First, its a good idea to break down the given picture and
 plan out your code.
@@ -88,10 +88,32 @@ With the above, you've lain out the hierarchy of dom elements,
 setting a good framework for your styling.
 
 However, if you just display the above, you won't get anything, because
-you haven't styled anything.
-Here's what I usually do after the first step:
-I add padding and borders, as well as minimal content, and make
-sure that everything looks like the wireframe (without font or a color scheme) above.
+you haven't styled anything.  Then, the padding, class naming in CSS
+will all fall naturally.
+
+*The actual css implementation will be left up to the reader.
+Once you've implemented everything (except the list items themselves).
+
+
+####Part 2: Javascript
+
+Now, we set all the interactions.  We want to
+
+- Set an event to happen when the add button is clicked
+- Grab the text from the input bar
+- Append a new element with that text to the list of tasks
+The first step would be to add ids to the HTML
+
+
+
+Let's translate this into javascript:
+```javascript
+    document.getElementById("add-btn").addEventListener("click", function(){
+      /* TBD */
+    });
+```
+
+
 
 
 
