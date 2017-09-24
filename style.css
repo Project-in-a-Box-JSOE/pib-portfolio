@@ -3,3 +3,13 @@ navbar {
   height:50px;
   background-color: blue;
 }
+
+.link {
+  float: right;
+  text-align: right;
+}
+
+
+.floater-right {
+  float: right;
+}
