@@ -10,43 +10,129 @@
 
 [<< Previous Lesson](lesson-js-challenge-2.html)&nbsp;&nbsp;
 
-  The final lesson will go deeper into web development,
-  using technologies from both the front and backend.
-  First, we'll cover how exactly the internet works,
-  and how the technology we'll learn ties into internet.
-
-  We'll decrypt some terms like "Front-End" and "Back-End"
-  as it pertains to the web.
+The final lesson will go deeper into web development,
+using technologies from both the front and backend.
+First, we'll cover how exactly the internet works,
+and how the technology we'll learn ties into internet.
 
 
-  I like to think about how the web works as how a mobile food truck works.
+I like to think about how the web works as how a mobile food truck works.
+In the world-wide web is a flow of data, and several
+points that intercept the data.
 
-  Inherent in the world-wide web is a flow of data, and several
-  posts that intercept the data.  There are protocols and standards,
-  but a really simple way of thinking about it is imagining it as a food
-  truck.
+In terms of the food truck example, there's a storefront that takes all your requests, and makes their own
+requests (browser), and the person that goes to the kitchen in the back to parse your request (order),
+which the chef and crew (backend/server) interprets how to server you your meal (content),
+does things, and sends it to the storefront (browser), which wraps it up and gives you your meal.
 
-  There's a storefront that takes all your requests, and makes their own
-  requests, goes to the kitchen in the back to parse your request (order),
-  which the chef and crew decides  how to server you your meal (content).
+You have already written the content (front-end code) in the previous lessons.
+In this lesson, you will write server code that will interpret responses
+and serve or manipulate that content.
 
-  In this scenario, you have servers that server content (data).
+<img src="/images/webworks.jpg" alt="">
 
-  [ Add More Content here ]
+We will be using node.js, an open source cross-platform JavaScript runtime environment for servers and applications,
+and since it is in javascript we can utilize everything we've learned so far.
+Download and install node [here](https://nodejs.org/en/download/) <br>
+To check if node is installed, run
+```
+    node -v
+    npm -v
+```
+
+After a successful install, the current versions should be printed.
+These commands will run any server script you want it to.
+
+Alright, time to checkout some starter code:
+
+```
+    git checkout js-server
+```
 
 
-  To get started, and really drive in the different between
-  server code and browser code, its time to write up some server code.
+First, study the code at index.js.  This is your server code
+```javascript
 
-  Your tools today will be node.
+  /* Part 1: Bringing in Modules */
+  var express = require('express');
+  var app = express();               // Creates a server
+
+  const port = process.env.PORT || 8080;   // Setting up Variables
+
+  var path = require('path');
+  app.use("/", express.static(path.join(__dirname, ''))); // Serve static files
 
 
+  /* Part 2: Define Routes */
+  app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname + '/index.html'));
+  });
 
-  <a name="function"></a>
-  ___
-  ___
-  #### Functions
-  Functions
+  app.listen(port, () => {
+    console.log('listening on port')
+  });
+```
+Breaking the above down, the *require* statements grab code modules
+that have functions that you can use.
+
+Express is web application framework that we can use to create servers.
+Once we bring it in with the require statement, we call express()
+as a function to start a server instance and attach it to a variable called app,
+where we can define its routes and how it responds to requests.
+```javascript
+  var express = require('express');
+  var app = express();               // Creates a server
+
+```
+
+However, to use the "express" module, you first have to download it.
+Node Package Manager, or "npm", makes it easy to do so.
+Type in "npm install express --save"
+
+Next, we are going to define some configurations for your server.
+```javascript
+  const port = process.env.PORT || 8080;   // Setting up Variables
+  var path = require('path');
+  app.use("/", express.static(path.join(__dirname, ''))); // Serve static files
+```
+
+We are defining the port your web app will listen to for requests.
+Then, we are grabbing the path module and using it to
+configure our server to serve our css files and images (our "static" files).
+The final step is to define how to actually handle the requests that come in
+
+```javascript
+    app.get('/', function(req, res){
+      res.send("Echoed into the void!");
+    });
+
+    app.listen(port, () => {
+      console.log('listening on port')
+    });
+```
+
+"/" is your root directory, and by assigning ".get," we are defining
+how the server should respond to get requests.  Additionally, your web server
+will listen on the port you defined earlier with "const port = ..."
+Recall that ports are how your computer interacts with the world wide web.
+
+Open up your browser and type in "localhost:8000"
+You should see the message "Echoed into the void");
+<br/>
+
+
+However, we don't want to send a message, we want to send our entire
+webpage. All that's left is to copy your index.html files and css files
+to the directory, and make ammends to this piece of code.
+```javascript
+    app.get('/', function(req, res){
+      res.sendFile(path.join(__dirname + '/index.html'));
+    });
+```
+
+Run your code with ```node index.js ``` <br>
+Congratulations, you have set up a web server!
+
 
 [<< Previous Lesson](lesson-js-challenge-2.html)&nbsp;&nbsp;
 
