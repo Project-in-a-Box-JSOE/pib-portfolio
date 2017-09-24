@@ -165,13 +165,27 @@
   Say you want to print out something.
 
   ```javascript
-      var funFunction = function(){
+      var printAlot = function(){
         // Enter code you want to call
+        for (var i = 0; i < 3; i++){
+          console.log("All the things you can do!");
+        }
       }
-      // or
-      function funFunction( ){
+      // or add parameters that the function will use
+      function printCustom(message, times ){
+        for (var i = 0; i < times; i++){
+          console.log(message);
+        }
       }
+
+      printAlot();  // Prints hardcoded message 3 times
+      printCustom("Javascript is awesome!", 4);  // Prints message 4 times
   ```
+
+
+
+
+
 
 [<< Previous Lesson](lesson-htmlcss-3.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-js-2.html)
 

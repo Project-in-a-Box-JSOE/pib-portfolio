@@ -12,15 +12,25 @@
   its time to learn some practical applications of javascript.
   Dom manipulation is one of the key points
   in knowing how to make magic happen in web development
+  DOM, or Document Object Model, allows developers to manipulate
+  your html and css.
+
+  Each tag becomes an object that you can call functions on and manipulate,
+  making them disappear, adding new tags upon your chosen conditions, etc.
+  Here's an image example of a dom
+
+  <img src="/images/dom.png" alt="">
 
   ####Lesson 1: Discovering the Dom
   ```javascript
-      var tool = document.getElementById("tool");
-      console.log(tool.style.width);
-      tool.style.width = "100px";
-      // Anything with dots is a property
+      var img = document.querySelector("img");
+      <!-- var tool = document.getElementById("tool"); -->
+      console.log(img.style.width);
+      img.style.width = "100px";
+      // Anything with dots above is a property
       // You can set the property "width" of the "style" to
       // Sth of this "50px"
+      // Watch your image shrink!
   ```
 
   ####Exercise
@@ -59,11 +69,7 @@
 
   Given: class of a div element you append to is called "frame"
   <br/> Hint: You'll need to append 5 children to the given div
-
-  Challenge exercises:
-
-  <div class="frame"> I'm the Frame! </div>
-  ####Lesson 3: An Act of Creation
+  <div class="frame"> I'm the Frame Element! I have a frame tag!</div>
 
 
 
