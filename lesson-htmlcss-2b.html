@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title>Project In A Box</title>
+<xmp theme="" style="display:none;">
+
+[Home](index.html)
+
+  ## Structure, Style, Starter Code: Part Four
+
+  [<< Previous Lesson](lesson-htmlcss-2.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-htmlcss-2c.html)
+
+  ### CSS: Clearly Stylish? Surely.
+  #### Selectors
+
+  CSS cannot exist without pre-existing HTML. All styling can only be applied to content that has already been surrounded with tags.
+
+  <img src="images/selector.png" alt="Selector">
+  <br><span style="color:grey">Source: w3schools</span>
+
+  There are three *selectors* CSS styling can be applied to:
+
+  1. **element**: This is inclusive of all HTML tags such as &lt;h1&gt; and &lt;p&gt;. An example of this is as follows:
+
+  ```
+  p {
+    color: red;
+    text-align: center;
+  } ```
+
+  2. **id**: This selector uses the id attribute of an HTML element to select a specific element. The id of an element should be the only one of its kind on a page, so any styling applied to this selector can only be applied to one element. To select an element with a specific id, preface the id name with a hash (#) character.
+
+  ```
+  #para1 {
+    text-align: center;
+    color: red;
+  }```
+
+  3. **class**: This selector selects elements with a specific class attribute. The class of an element can be applied to any number of elements. To select elements with a specified class, preface the id name with a period (.) character.
+
+  ```
+  .center {
+    text-align: center;
+    color: red;
+  }```
+
+  You can also group any selectors with the same properties like so:
+
+  ```
+  p, #para1, .center {
+    text-align: center;
+    color: red;
+  }```
+
+Knowing how and when to use selectors is a great way to save yourself work in CSS, since you can control the layout of multiple webpages and a lot of the code can be reused across multiple sections.
+
+  <br>
+  #### <span style="color:red">Challenge #1: A Splash of Color</span> <br>
+  Let's breathe some life into your HTML skeleton! Before starting this challenge, you will need to pick colors for the **background** of your page, for your **header text**, and for **all other text**. You can check out a comprehensive list of CSS preset colors [here](https://www.w3schools.com/cssref/css_colors.asp), or you can use [Google's own color picker](https://www.google.com/search?q=color+picker&oq=color+picker&gs_l=psy-ab.3..0i71k1l4.0.0.0.359600.0.0.0.0.0.0.0.0..0.0....0...1..64.psy-ab..0.0.0....0.nuKnxyREyq4) for a specific hex code for your color of choice.
+
+  Once you've chosen colors, make a new *CSS External Stylesheet* by opening up a new file and saving it with a **.css** suffix. Take the following code and input your names and/or hex values accordingly:
+
+  ```
+  body{
+    color: ___;       /* This denotes font color */
+    background: ___;  /* This denotes background color */
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    color: ___;
+  }```
+
+  Now go back to your HTML page, and within the "head" tags, type the following, filling in any blanks with your file name.
+
+  ```
+      <link type="text/css" rel="stylesheet" href="___">```
+
+  This will link your HTML file to your external CSS file. When you open your HTML file in browser again, it should look something like this, colors not withstanding:
+
+  <img src="images/html-page-4.png" alt="Example HTML in Browser with Picture and Color" style="height: 50%; width: 50%; border: solid;">
+  <br><span style="color:grey">Header Text: Chocolate, All Other Text: BurlyWood, Background: SeaShell</span>
+
+  <span style="color:red">Bonus Challenge 1A: </span> Add CSS code that would change the color of (1) any links on the page and (2) the background of the links within your navigation bar specifically. For part 2, recall the different types of CSS selectors.
+
+
+
+  [<< Previous Lesson](lesson-htmlcss-2.html)&nbsp;&nbsp;|&nbsp;&nbsp;[Next Lesson >>](lesson-htmlcss-2c.html)
+
+</xmp>
+</body>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
