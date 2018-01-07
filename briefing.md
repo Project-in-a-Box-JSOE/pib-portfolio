@@ -19,9 +19,9 @@ With any of these editors, save your files with a *.html extension so they can b
 
 ## A Note from the Developers
 
-Learning web development without a structured approach is tough and frustrating at times, given that there are so many languages, libraries, and concepts to learn.
+Learning web development without a structured approach is tough and frustrating at times, given that there are many languages, libraries, and concepts to learn.
 
-We wanted to build a comprehensive approach for students to learn not only web development with ease, but also take a bite of the knowledge of the internet along with the experience.
+We wanted to build a comprehensive approach for students to learn not only web development with ease, while also having the opportunity to build a web portfolio to showcase things along the way.
 
 ## Introduction
 
@@ -33,7 +33,7 @@ We wanted to build a comprehensive approach for students to learn not only web d
 * Understand How the internet works, and how it interweaves with web development
 
 ## Skills Learned
-* HTML/ CSS/ 
+* HTML/ CSS/
 * Vanilla Javascript
 * Jquery/ BootStrap
 
